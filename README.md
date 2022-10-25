@@ -11,7 +11,7 @@ The REST API to the example app is described below.
 
 ### Request
 
-`connect.get("games").body`
+`Rawg::Client.games`
 
 ### Response
 
@@ -21,13 +21,15 @@ Request Method: GET
 Status Code: 304 OK
 Remote Address: 127.0.0.1:3000
 Referrer Policy: strict-origin-when-cross-origin
+
+{count: 815662, next: "https://api.rawg.io/api/games?key=6cde2e0415a2465cbb627cab59b749f5&page=2",…}
 ```
 
 ## Get list of games released in 2001
 
 ### Request
 
-`connect.get("games", { dates: "2001-01-01,2001-12-31" }).body`
+`Rawg::Client.twok1`
 
 ### Response
 
@@ -37,13 +39,15 @@ Request Method: GET
 Status Code: 304 OK
 Remote Address: 127.0.0.1:3000
 Referrer Policy: strict-origin-when-cross-origin
+
+{count: 1096,…}
 ```
 
 ## Get list of games to be released from October 25, 2022 to October 25, 2023
 
 ### Request
 
-`connect.get("games", { dates: "2022-10-25,2023-10-25" }).body`
+`Rawg::Client.upcoming`
 
 ### Response
 
@@ -53,13 +57,15 @@ Request Method: GET
 Status Code: 304 OK
 Remote Address: 127.0.0.1:3000
 Referrer Policy: strict-origin-when-cross-origin
+
+{count: 120,…}
 ```
 
 ## Get list of PC games, ordered by highest ratings
 
 ### Request
 
-`connect.get("games", { platforms: "4", ordering: "-rating" }).body`
+`Rawg::Client.pc`
 
 ### Response
 
@@ -69,13 +75,15 @@ Request Method: GET
 Status Code: 304 OK
 Remote Address: 127.0.0.1:3000
 Referrer Policy: strict-origin-when-cross-origin
+
+{count: 493745,…}
 ```
 
-## Get list of PC games, ordered by highest ratings
+## Get list of games developed by Electronic Arts, ordered by highest ratings
 
 ### Request
 
-`connect.get("games", { developers: "109", ordering: "-rating" }).body`
+`Rawg::Client.ea`
 
 ### Response
 
@@ -85,4 +93,6 @@ Request Method: GET
 Status Code: 304 OK
 Remote Address: 127.0.0.1:3000
 Referrer Policy: strict-origin-when-cross-origin
+
+{count: 320,…}
 ```
