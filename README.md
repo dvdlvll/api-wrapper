@@ -15,11 +15,13 @@ connect.get("games").body
 
 ### Response
 
+```
 Request URL: http://127.0.0.1:3000/games
 Request Method: GET
 Status Code: 304 OK
 Remote Address: 127.0.0.1:3000
 Referrer Policy: strict-origin-when-cross-origin
+```
 
 ## Get list of games released in 2001
 
